@@ -18,5 +18,8 @@
     "bugs": {
         "url": "https://github.com/galvaonana/pagastes/issues"
     },
-    "homepage": "https://github.com/galvaonana/pagastes#readme"
+    "homepage": "https://github.com/galvaonana/pagastes#readme",
+    "dependencies": {
+        "express": "^4.17.1"
+    }
 }
