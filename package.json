@@ -20,6 +20,9 @@
     },
     "homepage": "https://github.com/galvaonana/pagastes#readme",
     "dependencies": {
-        "express": "^4.17.1"
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "sequelize": "^6.6.5",
+        "sqlite": "^4.0.23"
     }
 }
