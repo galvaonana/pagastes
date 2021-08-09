@@ -1,7 +1,7 @@
 const db = require("../../db");
 const Sequelize = require("sequelize");
 
-//todos os dados são obrigatórios
+//alguns dos dados são obrigatórios
 const Pagamento = db.define("pagamento", {
   valor: {
     type: Sequelize.DOUBLE, //attn

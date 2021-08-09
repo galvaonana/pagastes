@@ -56,7 +56,6 @@ class PagamentoController {
         autenticacao: "Autorizado",
         mensagem: mensagem,
       };
-      console.log(novoPagamento);
 
       await Pagamento.create(novoPagamento).then((novoPagamento) => {
         //atualiza o saldo da origem

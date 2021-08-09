@@ -12,5 +12,5 @@ db.sync()
   .catch((e) => console.log(e));
 
 app.listen(APP_PORT, () => {
-  console.log(`A ${APP_NAME} está pronta`);
+  console.log(`A ${APP_NAME} está pronta na porta ${APP_PORT}`);
 });

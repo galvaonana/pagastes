@@ -11,8 +11,8 @@ class UsuarioController {
         tipo: tipo,
       };
 
-      if (nome == "Alice") Object.assign(novoUsuario, { saldo: 1000000 });
       //adiciona saldo à conta para teste
+      if (nome == "Alice") Object.assign(novoUsuario, { saldo: 1000000 });
       else Object.assign(novoUsuario, { saldo: 0 }); //adiciona valor padrão
 
       await Usuario.create(novoUsuario).then((novoUsuario) =>
