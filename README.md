@@ -1,40 +1,51 @@
+![Pagastes, pagamentos do seu jeito!](/src/img/Logo.png "Pagastes logo")
 # pagastes
-Criação de uma API de pagamentos utilizando node.js e express
-Com a pagastes, você pode efetuar pagamentos sem sair da sua casa (e com as menores taxas do mercado)
-Foi usado no projeto 
-⦁	Express.js
-⦁	Sequelize
-⦁	SQLite
+## Criação de uma API de pagamentos utilizando node.js e express
+### Com a pagastes, você pode efetuar pagamentos sem sair da sua casa (e com as menores taxas do mercado)
 
-Como iniciar a API no computador local
-⦁	Primeiramente, é preciso ter certeza que já estamos no repositório desejado Após isso, e considerando que o GIT já tenha sido instalado:
-⦁	Crie uma pasta em "documentos" com o nome de "pagastes"
+**Foi usado no projeto**
+1. ⦁	Express.js
+2. ⦁	Sequelize
+3. ⦁	SQLite
 
-Agora, daremos os seguintes comandos para o git
-⦁	git clone //endereçoRepositorio << faz o download de todos os arquivos do repositório para o computador 
-⦁	cd pagastes
-Preparando o ambiente para execução
-Ainda no Terminal ou no PowerShell
-⦁	npm install << instala todas as dependencias
+**Como iniciar a API no computador local**
 
-Não esqueça de instalar o postman ou o insomnia (nesse caso, usamos o postman)
+1. ⦁	Primeiramente, é preciso ter certeza que já estamos no repositório desejado Após isso, e considerando que o GIT já tenha sido instalado:
+2. ⦁	Crie uma pasta em "documentos" com o nome de "pagastes"
 
-Para executar o "pagastes", vamos seguir os seguintes passos:
-⦁	Digitar no Terminal ou no PowerShell "npm start" 
+**Agora, daremos os seguintes comandos para o git**
 
-No postman as requests e responses vão parecer com os modelos abaixo: 
-Rotas do Usuário
-POST pagastes.com/usuario/ - Cria um unico usuario
-Body do request esperado: 
+1. ⦁	git clone //endereçoRepositorio << faz o download de todos os arquivos do repositório para o computador 
+2. ⦁	cd pagastes
 
-{
-    "nome": "Morgana",
-    "documento": "11111111",
-    "email": "eu@mail.com",
-    "tipo": "PESSOA_FISICA"
+**Preparando o ambiente para execução**
+
+*Ainda no Terminal ou no PowerShell*
+
+1. ⦁	npm install << instala todas as dependencias
+
+*Não esqueça de instalar o postman ou o insomnia (nesse caso, usamos o postman)*
+
+**Para executar o "pagastes", vamos seguir os seguintes passos:**
+1. ⦁	Digitar no Terminal ou no PowerShell "npm start" 
+
+**No postman as requests e responses vão parecer com os modelos abaixo:**
+
+**Rotas do Usuário**
+**POST**  `pagastes.com/usuario/` - *Cria um unico usuario*
+
+**Body do request esperado:** 
+
+```{
+ "nome": "Morgana",
+ "documento": "11111111",
+ "email": "eu@mail.com",
+ "tipo": "PESSOA_FISICA"
 }
-Body do response esperado
-{
+``` 
+**Body do response esperado**
+
+```{
     "id": 1,
     "nome": "Morgana",
     "documento": "11111111",
@@ -43,12 +54,18 @@ Body do response esperado
     "saldo": 0,
     "updatedAt": "2021-08-09T06:51:48.881Z",
     "createdAt": "2021-08-09T06:51:48.881Z"
-}
+    }
+``` 
 
-GET pagastes.com/usuario - Todos os usuarios
-Body do Request esperado
-	Não tem body esperado para o request
-Body do Response esperado
+**GET** `pagastes.com/usuario` - *Todos os usuarios*
+
+**Body do Request esperado**
+
+*Não tem body esperado para o request* 
+
+**Body do Response esperado**
+
+```
 [
     {
         "id": 1,
@@ -71,12 +88,15 @@ Body do Response esperado
         "updatedAt": "2021-08-09T06:54:18.786Z"
     }
 ]
+```
 
-GET pagastes.com/usuario/:id - Cria um novo usuario
-Não é necessário um body, apenas uma id informada na rota 
+**GET** `pagastes.com/usuario/:id` - *Cria um novo usuario*
 
-Response esperado
+*Não é necessário um body, apenas uma id informada na rota*
 
+**Body do Response esperado**
+
+```
 {
     "id": 1,
     "nome": "Morgana",
@@ -87,11 +107,15 @@ Response esperado
     "createdAt": "2021-08-09T06:51:48.881Z",
     "updatedAt": "2021-08-09T06:51:48.881Z"
 }
+```
 
-Rotas de pagamento 
+**Rotas de pagamento**
 
-GET pagastes.com/listapagamento - Todos os pagamentos
-Não é esperado um body, apenas a seguinte request
+**GET** `pagastes.com/listapagamento` - *Todos os pagamentos*
+
+**Não é esperado um body, apenas a seguinte request**
+
+```
 [
     {
         "id": 1,
@@ -103,6 +127,7 @@ Não é esperado um body, apenas a seguinte request
         "createdAt": "2021-08-09T07:03:06.587Z",
         "updatedAt": "2021-08-09T07:03:06.587Z"
     },
+    
     {
         "id": 2,
         "valor": 50,
@@ -114,47 +139,61 @@ Não é esperado um body, apenas a seguinte request
         "updatedAt": "2021-08-09T07:05:49.511Z"
     },
     {
-        "id": 3,
-        "valor": 500,
-        "usuarioOrigem": 3,
-        "usuarioDestino": 1,
-        "autenticacao": "Autorizado",
-        "mensagem": "Agora vai :)",
-        "createdAt": "2021-08-09T07:06:31.804Z",
-        "updatedAt": "2021-08-09T07:06:31.804Z"
+       "id": 3,
+       "valor": 500,
+       "usuarioOrigem": 3,
+       "usuarioDestino": 1,
+       "autenticacao": "Autorizado",
+       "mensagem": "Agora vai :)",`
+       "createdAt": "2021-08-09T07:06:31.804Z",
+       "updatedAt": "2021-08-09T07:06:31.804Z"
     }
 ]
-GET pagastes.com/pagamento/:id -  Pagamento especifico
-O que é esperado no body
+```
+
+**GET** `pagastes.com/pagamento/:id` -  *Pagamento especifico*
+
+**O que é esperado no body do require**
+
+```
 {
     "valor": 450.00,
     "usuarioOrigemId": 2,
     "usuarioDestinoId": 3,
     "mensagem": "De Alice para Morgana com carinho"
 }
+```
 
-O que é esperado no request
+**O que é esperado no body do request**
+
+```
 {
-    "id": 1,
-    "valor": 450,
-    "usuarioOrigem": 2,
-    "usuarioDestino": 3,
-    "autenticacao": "Autorizado",
-    "mensagem": "De Alice para Morgana com carinho",
-    "updatedAt": "2021-08-09T07:03:06.587Z",
-    "createdAt": "2021-08-09T07:03:06.587Z"
+    `"id": 1,`
+    `"valor": 450,`
+    `"usuarioOrigem": 2,`
+    `"usuarioDestino": 3,`
+   ` "autenticacao": "Autorizado",`
+    `"mensagem": "De Alice para Morgana com carinho",`
+   ` "updatedAt": "2021-08-09T07:03:06.587Z",`
+   ` "createdAt": "2021-08-09T07:03:06.587Z"`
 }
+```
 
-POST pagastes.com/pagamento - Novo pagamento 
-O que é esperado no body
+**POST** `pagastes.com/pagamento` - *Novo pagamento*
+
+**O que é esperado no body do require**
+```
 {
     "valor": 50.00,
     "usuarioOrigemId": 2,
     "usuarioDestinoId": 3,
     "mensagem": "Pra completar seu pedido, Morgana"
 }
+```
 
-O que é esperado no request
+**O que é esperado no body do request**
+
+```
 {
     "id": 2,
     "valor": 50,
@@ -165,4 +204,5 @@ O que é esperado no request
     "updatedAt": "2021-08-09T07:05:49.511Z",
     "createdAt": "2021-08-09T07:05:49.511Z"
 }
+```
 
